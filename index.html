@@ -1,0 +1,485 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Cyclespeech is a bilingual framework for controllable speech generation and structured speech understanding."
+    />
+    <meta name="theme-color" content="#0b1a22" />
+    <meta name="robots" content="noindex, nofollow" />
+    <link rel="canonical" href="https://cyclespeech.github.io/" />
+    <meta property="og:title" content="Cyclespeech — Bilingual Speech Intelligence" />
+    <meta
+      property="og:description"
+      content="Explore bilingual speech generation and structured speech understanding examples."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://cyclespeech.github.io/" />
+    <title>Cyclespeech — Bilingual Speech Intelligence</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script defer src="app.js"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#content">Skip to content</a>
+
+    <header class="site-header" data-header>
+      <a class="brand" href="#top" aria-label="Cyclespeech home">
+        <span class="brand-mark" aria-hidden="true">
+          <i></i><i></i><i></i><i></i><i></i>
+        </span>
+        <span>Cyclespeech</span>
+      </a>
+      <nav aria-label="Main navigation">
+        <a href="#overview">Overview</a>
+        <a href="#generation">Generation</a>
+        <a href="#understanding">Understanding</a>
+        <a href="#method">Method</a>
+      </nav>
+      <a class="header-link" href="#generation">Audio samples <span aria-hidden="true">↓</span></a>
+    </header>
+
+    <main id="content">
+      <section class="hero" id="top">
+        <div class="hero-glow hero-glow-one"></div>
+        <div class="hero-glow hero-glow-two"></div>
+        <div class="hero-copy reveal">
+          <p class="eyebrow"><span></span> Bilingual speech intelligence</p>
+          <h1>
+            Voice follows language.<br />
+            <em>Language learns from voice.</em>
+          </h1>
+          <p class="hero-lead">
+            Cyclespeech brings controllable speech generation and structured speech
+            understanding into one bilingual framework.
+          </p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#generation">
+              Listen to examples <span aria-hidden="true">↓</span>
+            </a>
+            <a class="button button-secondary" href="#method">Method overview</a>
+          </div>
+          <p class="release-note">Paper, code, and model release details coming soon.</p>
+        </div>
+
+        <div class="cycle-visual reveal" aria-label="Generation and understanding cycle">
+          <div class="cycle-grid"></div>
+          <div class="orbit orbit-outer"></div>
+          <div class="orbit orbit-inner"></div>
+          <div class="cycle-core">
+            <span class="core-wave" aria-hidden="true"></span>
+            <strong>Cycle</strong>
+            <small>shared speech intelligence</small>
+          </div>
+          <div class="cycle-node node-generate">
+            <span class="node-icon" aria-hidden="true">∿</span>
+            <span><strong>Generate</strong><small>text → speech</small></span>
+          </div>
+          <div class="cycle-node node-understand">
+            <span class="node-icon" aria-hidden="true">{ }</span>
+            <span><strong>Understand</strong><small>speech → structure</small></span>
+          </div>
+          <span class="orbit-dot dot-one"></span>
+          <span class="orbit-dot dot-two"></span>
+        </div>
+
+        <div class="hero-metrics reveal" aria-label="Project highlights">
+          <div><strong>2</strong><span>complementary modes</span></div>
+          <div><strong>EN · ZH</strong><span>bilingual inference</span></div>
+          <div><strong>APS · DSD · RP</strong><span>instruction views</span></div>
+        </div>
+      </section>
+
+      <section class="section overview" id="overview">
+        <div class="section-heading reveal">
+          <p class="kicker">One model, two directions</p>
+          <h2>A speech system that can both perform and perceive.</h2>
+          <p>
+            Describe how a line should sound, then synthesize it with a reference voice.
+            Or provide speech and recover a structured account of what was said and how it
+            was delivered.
+          </p>
+        </div>
+        <div class="capability-grid">
+          <article class="capability-card capability-generate reveal">
+            <span class="capability-index">01</span>
+            <div class="capability-icon" aria-hidden="true">Aa → ∿</div>
+            <h3>Controllable generation</h3>
+            <p>
+              Target text, a natural-language style instruction, and reference audio are
+              composed into expressive speech.
+            </p>
+            <ul>
+              <li>Speaker and acoustic attributes</li>
+              <li>Detailed speaking-style descriptions</li>
+              <li>Role-playing scenarios</li>
+            </ul>
+          </article>
+          <article class="capability-card capability-understand reveal">
+            <span class="capability-index">02</span>
+            <div class="capability-icon" aria-hidden="true">∿ → { }</div>
+            <h3>Structured understanding</h3>
+            <p>
+              Speech is analyzed into a consistent voice-profile JSON object together with
+              its transcript.
+            </p>
+            <ul>
+              <li>Language and speaker attributes</li>
+              <li>Emotion, scene, and delivery</li>
+              <li>Complete speech transcription</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section class="section generation" id="generation">
+        <div class="section-heading section-heading-row reveal">
+          <div>
+            <p class="kicker">Audio showcase</p>
+            <h2>From direction to delivery.</h2>
+          </div>
+          <p>
+            Compare reference speech with outputs from Step-Audio-2-mini,
+            Cyclespeech(SFT), and Cyclespeech(CycleGRPO) under identical inputs across
+            all three instruction types. Headphones recommended.
+          </p>
+        </div>
+
+        <div class="filters reveal" role="group" aria-label="Filter audio examples">
+          <button class="filter is-active" type="button" data-filter="all" aria-pressed="true">
+            All examples
+          </button>
+          <button class="filter" type="button" data-filter="en" aria-pressed="false">
+            English
+          </button>
+          <button class="filter" type="button" data-filter="zh" aria-pressed="false">
+            中文
+          </button>
+        </div>
+
+        <div class="demo-grid" data-demo-grid>
+          <article class="demo-card reveal" data-language="en">
+            <header class="demo-card-header">
+              <div><span class="language-tag">EN</span><span class="type-tag">APS</span></div>
+              <span class="sample-number">01</span>
+            </header>
+            <div class="demo-copy">
+              <p class="label">Target text</p>
+              <h3>“So, I wanted to create a dish which invoked that sensation”</h3>
+              <details>
+                <summary>Speaker &amp; acoustic instruction</summary>
+                <p>
+                  gender: Male; age: young adult; timbre / pitch: baritone, smooth,
+                  resonant, polished, warm, velvety, breathy; speech rate: moderate,
+                  rhythmic; volume: normal; accent annotation: British, contemporary
+                  Southern English (Modern Received Pronunciation).
+                </p>
+              </details>
+            </div>
+            <div class="audio-comparison">
+              <label><span>Reference voice</span><audio controls preload="none" src="audio/en-aps-reference.wav?v=20260913-4"></audio></label>
+              <label class="baseline-audio"><span>Step-Audio-2-mini</span><audio controls preload="none" src="audio/en-aps-baseline.wav?v=20260913-4"></audio></label>
+              <label class="sft-audio"><span>Cyclespeech(SFT)</span><audio controls preload="none" src="audio/en-aps-sft.wav?v=20260913-4"></audio></label>
+              <label class="model-audio"><span>Cyclespeech(CycleGRPO) output</span><audio controls preload="none" src="audio/en-aps-cyclespeech.wav?v=20260913-4"></audio></label>
+            </div>
+          </article>
+
+          <article class="demo-card reveal" data-language="zh">
+            <header class="demo-card-header">
+              <div><span class="language-tag">ZH</span><span class="type-tag">APS</span></div>
+              <span class="sample-number">02</span>
+            </header>
+            <div class="demo-copy">
+              <p class="label">目标文本</p>
+              <h3>“那也不要扫孤王的兴嘛”</h3>
+              <details>
+                <summary>说话人与声学属性指令</summary>
+                <p>男性，青壮年；中低音，浑厚磁性、细腻圆润；语速较快，音量适中；标准普通话。</p>
+              </details>
+            </div>
+            <div class="audio-comparison">
+              <label><span>参考音色</span><audio controls preload="none" src="audio/zh-aps-reference.wav"></audio></label>
+              <label class="baseline-audio"><span>Step-Audio-2-mini</span><audio controls preload="none" src="audio/zh-aps-baseline.wav"></audio></label>
+              <label class="sft-audio"><span>Cyclespeech(SFT)</span><audio controls preload="none" src="audio/zh-aps-sft.wav"></audio></label>
+              <label class="model-audio"><span>Cyclespeech(CycleGRPO) output</span><audio controls preload="none" src="audio/zh-aps-cyclespeech.wav"></audio></label>
+            </div>
+          </article>
+
+          <article class="demo-card reveal" data-language="en">
+            <header class="demo-card-header">
+              <div><span class="language-tag">EN</span><span class="type-tag">DSD</span></div>
+              <span class="sample-number">03</span>
+            </header>
+            <div class="demo-copy">
+              <p class="label">Target text</p>
+              <h3>“does the invitation for me to stay still stand”</h3>
+              <details>
+                <summary>Detailed style description</summary>
+                <p>
+                  Speak in a General American accent slowly, in a deep baritone
+                  register, with velvety and resonant timbre, at soft volume. Keep the
+                  tone vulnerable and tentative, with an emotionally presence, letting
+                  the delivery sound sensitive.
+                </p>
+              </details>
+            </div>
+            <div class="audio-comparison">
+              <label><span>Reference voice</span><audio controls preload="none" src="audio/en-dsd-reference.wav?v=20260913-2"></audio></label>
+              <label class="baseline-audio"><span>Step-Audio-2-mini</span><audio controls preload="none" src="audio/en-dsd-baseline.wav?v=20260913-2"></audio></label>
+              <label class="sft-audio"><span>Cyclespeech(SFT)</span><audio controls preload="none" src="audio/en-dsd-sft.wav?v=20260913-2"></audio></label>
+              <label class="model-audio"><span>Cyclespeech(CycleGRPO) output</span><audio controls preload="none" src="audio/en-dsd-cyclespeech.wav?v=20260913-2"></audio></label>
+            </div>
+          </article>
+
+          <article class="demo-card reveal" data-language="zh">
+            <header class="demo-card-header">
+              <div><span class="language-tag">ZH</span><span class="type-tag">DSD</span></div>
+              <span class="sample-number">04</span>
+            </header>
+            <div class="demo-copy">
+              <p class="label">目标文本</p>
+              <h3>“我只希望你能平安”</h3>
+              <details>
+                <summary>详细风格描述</summary>
+                <p>
+                  嗓音偏高、沙哑并带有哭腔，以深切的悲伤和恳求为主，呈现脆弱无助的人物状态，语调由高处急转下滑。
+                </p>
+              </details>
+            </div>
+            <div class="audio-comparison">
+              <label><span>参考音色</span><audio controls preload="none" src="audio/zh-dsd-reference.wav"></audio></label>
+              <label class="baseline-audio"><span>Step-Audio-2-mini</span><audio controls preload="none" src="audio/zh-dsd-baseline.wav"></audio></label>
+              <label class="sft-audio"><span>Cyclespeech(SFT)</span><audio controls preload="none" src="audio/zh-dsd-sft.wav"></audio></label>
+              <label class="model-audio"><span>Cyclespeech(CycleGRPO) output</span><audio controls preload="none" src="audio/zh-dsd-cyclespeech.wav"></audio></label>
+            </div>
+          </article>
+
+          <article class="demo-card reveal" data-language="en">
+            <header class="demo-card-header">
+              <div><span class="language-tag">EN</span><span class="type-tag">RP</span></div>
+              <span class="sample-number">05</span>
+            </header>
+            <div class="demo-copy">
+              <p class="label">Target text</p>
+              <h3>“Stay back! Shoo”</h3>
+              <details>
+                <summary>Role-playing instruction</summary>
+                <p>
+                  In a tense, high-stakes scenario, a young adult female confronts an
+                  immediate threat—perhaps a menacing animal or intruder—at close range.
+                </p>
+              </details>
+            </div>
+            <div class="audio-comparison">
+              <label><span>Reference voice</span><audio controls preload="none" src="audio/en-rp-reference.wav?v=20260913-2"></audio></label>
+              <label class="baseline-audio"><span>Step-Audio-2-mini</span><audio controls preload="none" src="audio/en-rp-baseline.wav?v=20260913-2"></audio></label>
+              <label class="sft-audio"><span>Cyclespeech(SFT)</span><audio controls preload="none" src="audio/en-rp-sft.wav?v=20260913-2"></audio></label>
+              <label class="model-audio"><span>Cyclespeech(CycleGRPO) output</span><audio controls preload="none" src="audio/en-rp-cyclespeech.wav?v=20260913-2"></audio></label>
+            </div>
+          </article>
+
+          <article class="demo-card reveal" data-language="zh">
+            <header class="demo-card-header">
+              <div><span class="language-tag">ZH</span><span class="type-tag">RP</span></div>
+              <span class="sample-number">06</span>
+            </header>
+            <div class="demo-copy">
+              <p class="label">目标文本</p>
+              <h3>“我要让他截肢，他硬是不肯。”</h3>
+              <details>
+                <summary>角色扮演指令</summary>
+                <p>在医院的走廊里，一名年轻女性紧握双手，声音颤抖地向医生诉说。</p>
+              </details>
+            </div>
+            <div class="audio-comparison">
+              <label><span>参考音色</span><audio controls preload="none" src="audio/zh-rp-reference.wav"></audio></label>
+              <label class="baseline-audio"><span>Step-Audio-2-mini</span><audio controls preload="none" src="audio/zh-rp-baseline.wav"></audio></label>
+              <label class="sft-audio"><span>Cyclespeech(SFT)</span><audio controls preload="none" src="audio/zh-rp-sft.wav"></audio></label>
+              <label class="model-audio"><span>Cyclespeech(CycleGRPO) output</span><audio controls preload="none" src="audio/zh-rp-cyclespeech.wav"></audio></label>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section understanding" id="understanding">
+        <div class="understanding-intro">
+          <div class="section-heading reveal">
+            <p class="kicker">Structured listening</p>
+            <h2>Speech becomes language you can inspect.</h2>
+            <p>
+              The understanding mode maps an input waveform to a stable voice-profile
+              object. It captures the transcript alongside speaker, delivery, emotion,
+              and scene attributes.
+            </p>
+            <div class="field-list" aria-label="Understanding output fields">
+              <span>gender</span><span>age</span><span>accent</span>
+              <span>emotion</span><span>emotion_detail</span><span>personality</span>
+              <span>scene</span><span>speed</span><span>volume</span><span>texture</span>
+              <span>transcript</span>
+            </div>
+            <a class="text-link" href="#method">See the shared framework <span aria-hidden="true">↓</span></a>
+          </div>
+          <div class="schema-card reveal" aria-label="Voice-profile output schema">
+            <div class="schema-bar"><span></span><span></span><span></span><small>voice-profile.json</small></div>
+            <pre><code>{
+  <b>"gender"</b>: <i>"..."</i>,
+  <b>"age"</b>: <i>"..."</i>,
+  <b>"accent"</b>: <i>"..."</i>,
+  <b>"emotion"</b>: <i>"..."</i>,
+  <b>"emotion_detail"</b>: [<i>"..."</i>],
+  <b>"personality"</b>: <i>"..."</i>,
+  <b>"scene"</b>: <i>"..."</i>,
+  <b>"speed"</b>: <i>"..."</i>,
+  <b>"volume"</b>: <i>"..."</i>,
+  <b>"texture"</b>: <i>"..."</i>,
+  <b>"txt"</b>: <i>"full transcript"</i>
+}</code></pre>
+          </div>
+        </div>
+        <div class="understanding-cases">
+          <div class="understanding-cases-heading reveal">
+            <div>
+              <p class="kicker">Understanding examples</p>
+              <h3>Listen to the input. Inspect the prediction.</h3>
+            </div>
+            <p>Each example pairs an unseen test utterance with Cyclespeech's structured analysis.</p>
+          </div>
+          <div class="understanding-case-grid">
+            <article class="understanding-case reveal">
+              <header class="understanding-case-header">
+                <div><span class="language-tag">EN</span><span class="type-tag">Input speech</span></div>
+                <span class="sample-number">01</span>
+              </header>
+              <audio controls preload="none" src="audio/understanding-en-input.wav"></audio>
+              <div class="understanding-transcript">
+                <p class="label">Transcript</p>
+                <h4>“Come on, Kong! Let's make like a banana and split.”</h4>
+              </div>
+              <p class="prediction-title">Cyclespeech prediction</p>
+              <div class="prediction-list" aria-label="English model prediction">
+                <div><span>Speaker</span><strong>Young woman · General American</strong></div>
+                <div><span>Affect</span><strong>Happy · playful urgency</strong></div>
+                <div><span>Delivery</span><strong>Medium-fast · normal volume</strong></div>
+                <div><span>Texture</span><strong>Bright, crisp, and resonant</strong></div>
+                <div><span>Context</span><strong>Lively outdoor setting</strong></div>
+                <div><span>Personality</span><strong>Energetic, confident, and engaging</strong></div>
+              </div>
+            </article>
+
+            <article class="understanding-case reveal" lang="zh-CN">
+              <header class="understanding-case-header">
+                <div><span class="language-tag">中文</span><span class="type-tag">输入语音</span></div>
+                <span class="sample-number">02</span>
+              </header>
+              <audio controls preload="none" src="audio/understanding-zh-input.wav"></audio>
+              <div class="understanding-transcript">
+                <p class="label">转写文本</p>
+                <h4>“我怎么就泼皮无赖了？”</h4>
+              </div>
+              <p class="prediction-title">Cyclespeech 预测</p>
+              <div class="prediction-list" aria-label="中文模型预测">
+                <div><span>说话人</span><strong>青年男性 · 普通话</strong></div>
+                <div><span>情感</span><strong>生气 · 强烈辩解</strong></div>
+                <div><span>表达</span><strong>快速 · 大音量</strong></div>
+                <div><span>音色</span><strong>清脆但紧绷</strong></div>
+                <div><span>场景</span><strong>冲突场景</strong></div>
+                <div><span>人物性格</span><strong>冲动、委屈</strong></div>
+              </div>
+            </article>
+
+            <article class="understanding-case reveal">
+              <header class="understanding-case-header">
+                <div><span class="language-tag">EN</span><span class="type-tag">Input speech</span></div>
+                <span class="sample-number">03</span>
+              </header>
+              <audio controls preload="none" src="audio/understanding-en-input-02.wav"></audio>
+              <div class="understanding-transcript">
+                <p class="label">Transcript</p>
+                <h4>“They tell you everything they do is for the family.”</h4>
+              </div>
+              <p class="prediction-title">Cyclespeech prediction</p>
+              <div class="prediction-list" aria-label="English model prediction">
+                <div><span>Speaker</span><strong>Middle-aged woman · General American</strong></div>
+                <div><span>Affect</span><strong>Sad · somber resignation</strong></div>
+                <div><span>Delivery</span><strong>Medium-slow · normal volume</strong></div>
+                <div><span>Texture</span><strong>Velvety, smoky, and breathy</strong></div>
+                <div><span>Context</span><strong>Dimly lit room</strong></div>
+                <div><span>Personality</span><strong>Reflective, weary, and sincere</strong></div>
+              </div>
+            </article>
+
+            <article class="understanding-case reveal" lang="zh-CN">
+              <header class="understanding-case-header">
+                <div><span class="language-tag">中文</span><span class="type-tag">输入语音</span></div>
+                <span class="sample-number">04</span>
+              </header>
+              <audio controls preload="none" src="audio/understanding-zh-input-02.wav"></audio>
+              <div class="understanding-transcript">
+                <p class="label">转写文本</p>
+                <h4>“因为谁都搬不动你。”</h4>
+              </div>
+              <p class="prediction-title">Cyclespeech 预测</p>
+              <div class="prediction-list" aria-label="中文模型预测">
+                <div><span>说话人</span><strong>青年女性 · 普通话</strong></div>
+                <div><span>情感</span><strong>开心 · 轻松调侃</strong></div>
+                <div><span>表达</span><strong>中快语速 · 正常音量</strong></div>
+                <div><span>音色</span><strong>清脆甜美</strong></div>
+                <div><span>场景</span><strong>轻松的社交场合</strong></div>
+                <div><span>人物性格</span><strong>亲和力强</strong></div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section method" id="method">
+        <div class="section-heading reveal">
+          <p class="kicker">The cycle</p>
+          <h2>Complementary tasks, shared speech intelligence.</h2>
+          <p>
+            Cyclespeech connects generation and understanding around a shared audio-language
+            foundation, with task-specific adapters for each direction.
+          </p>
+        </div>
+        <div class="method-flow reveal" aria-label="Cyclespeech inference flow">
+          <div class="flow-input">
+            <span>Style instruction</span>
+            <span>Target text</span>
+            <span>Reference audio</span>
+          </div>
+          <div class="flow-arrow"><i></i><small>generation</small></div>
+          <div class="flow-model"><span>shared foundation</span><strong>Cyclespeech</strong><small>switchable task adapters</small></div>
+          <div class="flow-arrows">
+            <div><small>speech</small><i></i></div>
+            <div><i></i><small>audio input</small></div>
+          </div>
+          <div class="flow-output">
+            <span>Waveform</span>
+            <span>Voice profile</span>
+            <span>Transcript</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="cta reveal">
+        <p class="kicker">Explore the project</p>
+        <h2>Listen, generate, and understand.</h2>
+        <p>Explore bilingual generation and structured understanding examples.</p>
+        <div class="hero-actions">
+          <a class="button button-light" href="#generation">Listen to samples <span aria-hidden="true">↑</span></a>
+          <a class="button button-outline" href="#top">Back to top</a>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <a class="brand footer-brand" href="#top">
+        <span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span>
+        <span>Cyclespeech</span>
+      </a>
+      <p>Research demo · English &amp; 中文</p>
+      <p>Anonymous project page · 2026</p>
+    </footer>
+  </body>
+</html>
